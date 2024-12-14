@@ -1,0 +1,49 @@
+# As you've got familiar with Y86 after writting your first y86 code
+# (bubble.ys), this code is left blank for you :)
+
+# NAME:张乐天
+# ID:2300012938
+
+.pos 0
+	irmovq	stack,%rsp
+	call main
+	halt
+
+# this is a sample test case
+
+    .align 8
+ele1:
+    .quad 0x00d
+    .quad ele2
+ele2:
+    .quad 0x0e0
+    .quad ele3
+ele3:
+    .quad 0xf00
+    .quad 0
+
+rsum_list:
+    andq %rdi,%rdi
+    je branch1
+    jmp branch2
+
+branch1:
+    irmovq $0,%rax
+    ret
+
+branch2:
+    pushq %r8
+    mrmovq (%rdi),%r8
+    mrmovq 8(%rdi),%rdi
+    call rsum_list
+    addq %r8,%rax
+    popq %r8
+    ret
+
+main:
+    irmovq ele1,%rdi
+    call rsum_list
+    ret
+
+    .pos 0x200
+stack:

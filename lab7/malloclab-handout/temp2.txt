@@ -1,0 +1,91 @@
+Measuring performance with a cycle counter.
+Processor clock rate ~= 2000.0 MHz
+LINENO : 119
+extend! 400
+place_ptr 0x800000058 size = 0x1000 number = 12
+LINENO : 485
+list 12 : position 0x800000058 remain 0x1000 bytes.
+LINENO : 119
+list 12 : position 0x800000058 remain 0x1000 bytes.
+SIZE: 1000000
+malloc primitive = 0xf4240
+extend! 3d092
+coalesce 3: prev = 0x800000058 1000, bp = 0x800001058 f4248
+remove 0x800000058 size = 0x1000
+place_ptr 0x800000058 size = 0xf5248 number = 15
+LINENO : 543
+list 15 : position 0x800000058 remain 0xf5248 bytes.
+LINENO : 485
+list 15 : position 0x800000058 remain 0xf5248 bytes.
+remove 0x800000058 size = 0xf5248
+place_ptr 0x8000f42a0 size = 0x1000 number = 12
+LINENO : 567
+list 12 : position 0x8000f42a0 remain 0x1000 bytes.
+malloc completed 0x800000058, 0xf4248
+SIZE: 1000000
+malloc primitive = 0xf4240
+extend! 3d092
+coalesce 3: prev = 0x8000f42a0 1000, bp = 0x8000f52a0 f4248
+remove 0x8000f42a0 size = 0x1000
+place_ptr 0x8000f42a0 size = 0xf5248 number = 15
+LINENO : 543
+list 15 : position 0x8000f42a0 remain 0xf5248 bytes.
+LINENO : 485
+list 15 : position 0x8000f42a0 remain 0xf5248 bytes.
+remove 0x8000f42a0 size = 0xf5248
+place_ptr 0x8001e84e8 size = 0x1000 number = 12
+LINENO : 567
+list 12 : position 0x8001e84e8 remain 0x1000 bytes.
+malloc completed 0x8000f42a0, 0xf4248
+free 0x800000058
+place_ptr 0x800000058 size = 0xf4248 number = 15
+LINENO : 240
+list 12 : position 0x8001e84e8 remain 0x1000 bytes.
+list 15 : position 0x800000058 remain 0xf4248 bytes.
+free 0x8000f42a0
+coalesce 4: prev = 0x800000058 f4248, bp = 0x8000f42a0 f4248, next = 0x8001e84e8 1000
+remove 0x800000058 size = 0xf4248
+remove 0x8001e84e8 size = 0x1000
+place_ptr 0x800000058 size = 0x1e9490 number = 15
+LINENO : 543
+list 15 : position 0x800000058 remain 0x1e9490 bytes.
+LINENO : 240
+list 15 : position 0x800000058 remain 0x1e9490 bytes.
+SIZE: 999990
+malloc primitive = 0xf4236
+remove 0x800000058 size = 0x1e9490
+place_ptr 0x8000f4298 size = 0xf5250 number = 15
+LINENO : 567
+list 15 : position 0x8000f4298 remain 0xf5250 bytes.
+malloc completed 0x800000058, 0xf4240
+SIZE: 2
+malloc primitive = 0x2
+remove 0x8000f4298 size = 0xf5250
+place_ptr 0x8000f42a8 size = 0xf5240 number = 15
+LINENO : 567
+list 15 : position 0x8000f42a8 remain 0xf5240 bytes.
+malloc completed 0x8000f4298, 0x10
+free 0x800000058
+place_ptr 0x800000058 size = 0xf4240 number = 15
+prev = 0x800000044, now = 0x800000058, next = 0x8000f42a8
+LINENO : 478
+list 15 : position 0x800000058 remain 0xf4240 bytes.
+list 15 : position 0x8000f42a8 remain 0xf5240 bytes.
+LINENO : 240
+list 15 : position 0x800000058 remain 0xf4240 bytes.
+list 15 : position 0x8000f42a8 remain 0xf5240 bytes.
+free 0x8000f4298
+coalesce 4: prev = 0x800000058 f4240, bp = 0x8000f4298 10, next = 0x8000f42a8 f5240
+remove 0x800000058 size = 0xf4240
+remove 0x8000f42a8 size = 0xf5240
+place_ptr 0x800000058 size = 0x1e9490 number = 15
+LINENO : 543
+list 15 : position 0x800000058 remain 0x1e9490 bytes.
+LINENO : 240
+list 15 : position 0x800000058 remain 0x1e9490 bytes.
+
+
+correctness check finished, by running tracefile "traces/temp.rep".
+ => correct.
+
+Perf index = 0 (util) & 0 (thru) = 0/100

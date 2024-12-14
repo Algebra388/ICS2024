@@ -1,0 +1,63 @@
+# NAME:张乐天
+# ID:2300012938
+
+	.pos 0
+	irmovq	stack,%rsp
+	call main
+	halt
+
+	.align 8
+array:
+	.quad 0xbca
+	.quad 0xcba
+	.quad 0xacb
+	.quad 0xcab
+	.quad 0xabc
+	.quad 0xbac
+	
+################################################################################
+# You may want to modify this portion
+
+bubble_a:
+	irmovq $1,%r8
+	subq %r8,%rsi
+	rrmovq %rsi,%r8 # r8->count-1(last)
+	jmp test1
+reta1:
+	rrmovq %rdi,%r9 # r9->data(i)
+	rrmovq %r8,%r10 # r10->8*(last)
+	addq %r10,%r10
+	addq %r10,%r10
+	addq %r10,%r10
+	addq %rdi,%r10 # r10->8*last+data
+	jmp test2
+reta2:
+	mrmovq (%r9),%r11
+	mrmovq 8(%r9),%r12
+	mrmovq 8(%r9),%r13
+	subq %r11,%r13
+	jge condition
+	rmmovq %r11,8(%r9)
+	rmmovq %r12,(%r9)
+condition:
+	irmovq $8,%r14
+	addq %r14,%r9
+test2:
+	rrmovq %r10,%r11
+	subq %r9,%r11
+	jg reta2
+	irmovq $1,%r14
+	subq %r14,%r8
+test1:
+	andq %r8,%r8
+	jne reta1
+	ret
+
+main:
+	irmovq array,%rdi
+	irmovq $6,%rsi
+	call bubble_a
+	ret
+
+	.pos 0x200
+stack:

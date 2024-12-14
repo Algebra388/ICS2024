@@ -1,0 +1,35 @@
+Measuring performance with a cycle counter.
+Processor clock rate ~= 2000.0 MHz
+Line[485] : list 11 from 8192 to 16384, boundary error! 0x800000058
+Line[119] : list 11 from 8192 to 16384, boundary error! 0x800000058
+Line[567] : list 11 from 8192 to 16384, boundary error! 0x800000080
+Line[543] : list 11 from 8192 to 16384, boundary error! 0x800000058
+Line[240] : list 11 from 8192 to 16384, boundary error! 0x800000058
+Line[567] : list 11 from 8192 to 16384, boundary error! 0x800000080
+Line[567] : list 11 from 8192 to 16384, boundary error! 0x8000000a8
+Line[567] : list 11 from 8192 to 16384, boundary error! 0x8000000f0
+Line[240] : list 4 from 96 to 128, boundary error! 0x800000058
+Line[240] : list 11 from 8192 to 16384, boundary error! 0x8000000f0
+Line[543] : list 5 from 128 to 256, boundary error! 0x800000058
+Line[543] : list 11 from 8192 to 16384, boundary error! 0x8000000f0
+Line[240] : list 5 from 128 to 256, boundary error! 0x800000058
+Line[240] : list 11 from 8192 to 16384, boundary error! 0x8000000f0
+Line[543] : list 11 from 8192 to 16384, boundary error! 0x800000058
+Line[240] : list 11 from 8192 to 16384, boundary error! 0x800000058
+Line[567] : list 11 from 8192 to 16384, boundary error! 0x8000000e0
+Line[240] : list 7 from 512 to 1024, boundary error! 0x800000058
+Line[567] : list 5 from 128 to 256, boundary error! 0x800000080
+Line[567] : list 5 from 128 to 256, boundary error! 0x800000080
+Line[543] : list 7 from 512 to 1024, boundary error! 0x800000058
+Line[240] : list 7 from 512 to 1024, boundary error! 0x800000058
+Line[567] : list 5 from 128 to 256, boundary error! 0x800000088
+Line[543] : list 7 from 512 to 1024, boundary error! 0x800000058
+Line[240] : list 7 from 512 to 1024, bo[?2004lror! 0x800000058
+Line[543] : list 10 from 4096 to 8192, boundary error! 0x800000058
+Line[240] : list 10 from 4096 to 8192, boundary error! 0x800000058
+
+
+correctness check finished, by running tracefile "traces/malloc-free.rep".
+ => correct.
+
+Perf index = 0 (util) & 0 (thru) = 0/100

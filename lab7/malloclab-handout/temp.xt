@@ -1,0 +1,8 @@
+Measuring performance with a cycle counter.
+Processor clock rate ~= 2000.0 MHz
+
+
+correctness check finished, by running tracefile "traces/random.rep".
+ => correct.
+
+Perf index = 0 (util) & 0 (thru) = 0/100

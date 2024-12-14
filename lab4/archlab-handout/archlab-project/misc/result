@@ -1,0 +1,35 @@
+[90m0x0000[0m  icode: 0x3 (IRMOVQ), ifun: 0, rA: RNONE, rB: RSP, V: 0x200
+[90m0x000a[0m  icode: 0x8 (CALL), ifun: 0, V: 0x86
+[90m0x0086[0m  icode: 0x3 (IRMOVQ), ifun: 0, rA: RNONE, rB: RDI, V: 0x18
+[90m0x0090[0m  icode: 0x8 (CALL), ifun: 0, V: 0x48
+[90m0x0048[0m  icode: 0x3 (IRMOVQ), ifun: 0, rA: RNONE, rB: RAX, V: 0x0
+[90m0x0052[0m  icode: 0x7 (JX), ifun: 0, V: 0x7a
+[90m0x007a[0m  icode: 0x6 (OPQ), ifun: 2, rA: RDI, rB: RDI
+[90m0x007c[0m  icode: 0x7 (JX), ifun: 4, V: 0x5b
+[90m0x005b[0m  icode: 0x5 (MRMOVQ), ifun: 0, rA: R8, rB: RDI
+[90m0x0065[0m  icode: 0x6 (OPQ), ifun: 0, rA: R8, rB: RAX
+[90m0x0067[0m  icode: 0x5 (MRMOVQ), ifun: 0, rA: RDI, rB: RDI
+[90m0x0071[0m  icode: 0x7 (JX), ifun: 0, V: 0x7a
+[90m0x007a[0m  icode: 0x6 (OPQ), ifun: 2, rA: RDI, rB: RDI
+[90m0x007c[0m  icode: 0x7 (JX), ifun: 4, V: 0x5b
+[90m0x005b[0m  icode: 0x5 (MRMOVQ), ifun: 0, rA: R8, rB: RDI
+[90m0x0065[0m  icode: 0x6 (OPQ), ifun: 0, rA: R8, rB: RAX
+[90m0x0067[0m  icode: 0x5 (MRMOVQ), ifun: 0, rA: RDI, rB: RDI
+[90m0x0071[0m  icode: 0x7 (JX), ifun: 0, V: 0x7a
+[90m0x007a[0m  icode: 0x6 (OPQ), ifun: 2, rA: RDI, rB: RDI
+[90m0x007c[0m  icode: 0x7 (JX), ifun: 4, V: 0x5b
+[90m0x005b[0m  icode: 0x5 (MRMOVQ), ifun: 0, rA: R8, rB: RDI
+[90m0x0065[0m  icode: 0x6 (OPQ), ifun: 0, rA: R8, rB: RAX
+[90m0x0067[0m  icode: 0x5 (MRMOVQ), ifun: 0, rA: RDI, rB: RDI
+[90m0x0071[0m  icode: 0x7 (JX), ifun: 0, V: 0x7a
+[90m0x007a[0m  icode: 0x6 (OPQ), ifun: 2, rA: RDI, rB: RDI
+[90m0x007c[0m  icode: 0x7 (JX), ifun: 4, V: 0x5b
+[90m0x0085[0m  icode: 0x9 (RET), ifun: 0
+[90m0x0099[0m  icode: 0x9 (RET), ifun: 0
+[90m0x0013[0m  icode: 0x0 (HALT), ifun: 0
+
+total instructions: 29
+ax [90m0000000000000[0m[1mfed[0m bx [90m0000000000000000[0m cx [90m0000000000000000[0m dx [90m0000000000000000[0m
+si [90m0000000000000000[0m di [90m0000000000000000[0m sp [90m0000000000000[0m[1m200[0m bp [90m0000000000000000[0m
+0x01f0: [1m[31m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m -> [1m[32m99[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m
+0x01f8: [1m[31m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m -> [1m[32m13[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m[90m00[0m

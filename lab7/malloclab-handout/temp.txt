@@ -1,0 +1,44 @@
+Measuring performance with a cycle counter.
+Processor clock rate ~= 2000.0 MHz
+LINENO : 119
+extend! 400
+LINENO : 485
+list 11 : position 0x800000058 remain 0x1000 bytes.
+LINENO : 119
+list 11 : position 0x800000058 remain 0x1000 bytes.
+SIZE: 1024
+malloc primitive = 0x400
+remove 0x800000058
+LINENO : 567
+list 11 : position 0x800000460 remain 0xbf8 bytes.
+malloc completed 0x800000058, 0x408
+SIZE: 32
+malloc primitive = 0x20
+remove 0x800000460
+LINENO : 567
+list 11 : position 0x800000488 remain 0xbd0 bytes.
+malloc completed 0x800000460, 0x28
+SIZE: 33
+malloc primitive = 0x21
+remove 0x800000488
+LINENO : 567
+list 11 : position 0x8000004b8 remain 0xba0 bytes.
+malloc completed 0x800000488, 0x30
+free 0x800000460
+LINENO : 240
+list 4 : position 0x800000460 remain 0x28 bytes.
+list 11 : position 0x8000004b8 remain 0xba0 bytes.
+SIZE: 34
+malloc primitive = 0x22
+remove 0x8000004b8
+LINENO : 567
+list 4 : position 0x800000460 remain 0x28 bytes.
+list 11 : position 0x8000004e8 remain 0xb70 bytes.
+malloc completed 0x8000004b8, 0x30
+free 0x8000004b8
+coalesce 2: prev = 0x800000488 30, bp = 0x8000004b8 30
+remove 0x8000004e8
+remove 0x8000004b8
+LINENO : 543
+list 4 : position 0x800000460 remain 0x28 bytes.
+list 4 : position 0x8000004bc remain 0x30 bytes.

@@ -1,0 +1,70 @@
+size_t find_size(int x)
+{
+	if(x == 0) return 4;
+	if(x == 1) return 8;
+	if(x == 2) return 12;
+	if(x == 3) return 16;
+	if(x == 4) return 20;
+	if(x == 5) return 24;
+	if(x == 6) return 28;
+	if(x == 7) return 32;
+	if(x == 8) return 36;
+	if(x == 9) return 40;
+	if(x == 10) return 44;
+	if(x == 11) return 48;
+	if(x == 12) return 52;
+	if(x == 13) return 56;
+	if(x == 14) return 64;
+	if(x == 15) return 80;
+	if(x == 16) return 100;
+	if(x == 17) return 120;
+	if(x == 18) return 140;
+	if(x == 19) return 160;
+	if(x == 20) return 240;
+	if(x == 21) return 320;
+	if(x == 22) return 480;
+	if(x == 23) return 512;
+	if(x == 24) return 640;
+	if(x == 25) return 1120;
+	if(x == 26) return 1920;
+	if(x == 27) return 3840;
+	if(x == 28) return 4096;
+	if(x == 29) return 7680;
+	if(x == 30) return 15360;
+	return -1;
+}
+size_t get_number(int x)
+{
+	if(x <= 4) return 0;
+	if(x <= 8) return 1;
+	if(x <= 12) return 2;
+	if(x <= 16) return 3;
+	if(x <= 20) return 4;
+	if(x <= 24) return 5;
+	if(x <= 28) return 6;
+	if(x <= 32) return 7;
+	if(x <= 36) return 8;
+	if(x <= 40) return 9;
+	if(x <= 44) return 10;
+	if(x <= 48) return 11;
+	if(x <= 52) return 12;
+	if(x <= 56) return 13;
+	if(x <= 64) return 14;
+	if(x <= 80) return 15;
+	if(x <= 100) return 16;
+	if(x <= 120) return 17;
+	if(x <= 140) return 18;
+	if(x <= 160) return 19;
+	if(x <= 240) return 20;
+	if(x <= 320) return 21;
+	if(x <= 480) return 22;
+	if(x <= 512) return 23;
+	if(x <= 640) return 24;
+	if(x <= 1120) return 25;
+	if(x <= 1920) return 26;
+	if(x <= 3840) return 27;
+	if(x <= 4096) return 28;
+	if(x <= 7680) return 29;
+	if(x <= 15360) return 30;
+	return 31;
+}

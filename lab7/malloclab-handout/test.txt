@@ -1,0 +1,22 @@
+Results for mm malloc:
+  valid  util   ops    secs     Kops  trace
+   yes    86%  100000  0.024885  4019 ./traces/alaska.rep
+ * yes    99%    4805  0.030564   157 ./traces/amptjp.rep
+ * yes    83%    4162  0.012470   334 ./traces/bash.rep
+ * yes    56%   57716  6.535100     9 ./traces/boat.rep
+ u yes    73%      --        --    -- ./traces/binary2-bal.rep
+ * yes    99%    5032  0.024840   203 ./traces/cccp.rep
+ * yes    74%   11991  0.122198    98 ./traces/chrome.rep
+ * yes    99%   20000  0.007274  2750 ./traces/coalesce-big.rep
+   yes    66%   14400  0.000710 20286 ./traces/coalescing-bal.rep
+   yes   100%      15  0.000008  1882 ./traces/corners.rep
+ * yes    99%    5683  0.047912   119 ./traces/cp-decl.rep
+ u yes    71%      --        --    -- ./traces/exhaust.rep
+ * yes   100%    5380  0.026041   207 ./traces/expr-bal.rep
+ * yes    91%   55092  1.879762    29 ./traces/freeciv.rep
+ * yes    88%     372  0.000347  1073 ./traces/ls.rep
+   yes    34%      10  0.000015   654 ./traces/malloc.rep
+   yes    28%      17  0.000017  1030 ./traces/malloc-free.rep
+ p yes     --    1494  0.002946   507 ./traces/perl.rep
+   yes    27%   14401  0.148774    97 ./traces/realloc.rep
+12 11     86%  171727  8.689454    20
