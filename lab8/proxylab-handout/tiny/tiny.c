@@ -53,6 +53,7 @@ int main(int argc, char **argv)
  * doit - handle one HTTP request/response transaction
  */
 /* $begin doit */
+int verbose = 0;
 void doit(int fd) 
 {
     int is_static;
@@ -68,21 +69,38 @@ void doit(int fd)
         return;
     printf("%s", buf);
     sscanf(buf, "%s %s %s", method, uri, version);       //line:netp:doit:parserequest
+    if(verbose)
+    {
+        fprintf(stderr, "1\n");
+    }
     if (strcasecmp(method, "GET")) {                     //line:netp:doit:beginrequesterr
         clienterror(fd, method, "501", "Not Implemented",
                     "Tiny does not implement this method");
         return;
-    }                                                    //line:netp:doit:endrequesterr
+    }               
+    if(verbose)
+    {
+        fprintf(stderr, "2\n");
+    }                                     //line:netp:doit:endrequesterr
     read_requesthdrs(&rio, req_header_buf);              //line:netp:doit:readrequesthdrs
 
+    if(verbose)
+    {
+        fprintf(stderr, "3:%s\n", uri);
+    }
     /* Parse URI from GET request */
     is_static = parse_uri(uri, filename, cgiargs);       //line:netp:doit:staticcheck
+    if(verbose) printf("8:%s\n", filename);
     if (stat(filename, &sbuf) < 0) {                     //line:netp:doit:beginnotfound
 	clienterror(fd, filename, "404", "Not found",
 		    "Tiny couldn't find this file");
 	return;
     }                                                    //line:netp:doit:endnotfound
 
+    if(verbose)
+    {
+        fprintf(stderr, "4\n");
+    }
     if (is_static) { /* Serve static content */          
 	if (!(S_ISREG(sbuf.st_mode)) || !(S_IRUSR & sbuf.st_mode)) { //line:netp:doit:readable
 	    clienterror(fd, filename, "403", "Forbidden",
@@ -90,6 +108,10 @@ void doit(int fd)
 	    return;
 	}
 	serve_static(fd, filename, sbuf.st_size);        //line:netp:doit:servestatic
+    if(verbose)
+    {
+        fprintf(stderr, "6\n");
+    }
     }
     else { /* Serve dynamic content */
 	if (!(S_ISREG(sbuf.st_mode)) || !(S_IXUSR & sbuf.st_mode)) { //line:netp:doit:executable
@@ -98,6 +120,14 @@ void doit(int fd)
 	    return;
 	}
 	serve_dynamic(fd, filename, cgiargs, req_header_buf);//line:netp:doit:servedynamic
+    if(verbose)
+    {
+        fprintf(stderr, "7\n");
+    }
+    }
+    if(verbose)
+    {
+        fprintf(stderr, "5\n");
     }
 }
 /* $end doit */
